@@ -108,7 +108,7 @@
         return im_outside + im_inside;
       }
   
-      assert.equal(yay(), "???");
+      assert.equal(yay(), "alpha" + "omega");
     });
   
     QUnit.test("Functions retain outer scope references between calls.", function(assert){
