@@ -84,7 +84,7 @@
       assert.equal(peanuts, "300");
     });
   
-    QUnit.test("Variables created with var in a funtion are re-created each time", function(assert){
+    QUnit.test("Variables created with var in a function are re-created each time", function(assert){
       function yay(){
         if(this.counter !== undefined){
           counter = counter + 1;
@@ -94,11 +94,11 @@
       }
   
       yay();
-      assert.equal(this.counter, "???");
+      assert.equal(this.counter, undefined);
       yay();
-      assert.equal(this.counter, "???");
+      assert.equal(this.counter, undefined);
       yay();
-      assert.equal(this.counter, "???");
+      assert.equal(this.counter, undefined);
     });
   
     QUnit.test("Inner scope can access outer scope", function(assert){
