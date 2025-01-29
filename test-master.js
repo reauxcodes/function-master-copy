@@ -11,6 +11,7 @@
     });
   
     QUnit.test("Functions can access/modify variables in parent scope.", function(assert){
+
       var outside_the_function = null;
 
       function yay(){
@@ -20,7 +21,7 @@
   
       yay();
   
-      assert.equal(outside_the_function, "???");
+      assert.equal(outside_the_function, "can you see me?");
     });
   
     QUnit.test("Function Parameters become scoped to the function.", function(assert){
