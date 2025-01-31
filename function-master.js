@@ -29,9 +29,15 @@ return Object.keys(object).join(' ');
 //////////////////////////////////////////////////////////////////////
 // Function 3 - Values to String /////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
+/*
+I: an object
+O: return all the keys of object in a string, each separated with a space
+C:
+E:
+*/
 
 function valuesToString(object) {
-    
+    return Object.values(object).filter(value => typeof value === 'string').join(' ');
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -39,7 +45,11 @@ function valuesToString(object) {
 //////////////////////////////////////////////////////////////////////
 
 function arrayOrObject(collection) {
-    
+    if (Array.isArray(collection) === 'array'){
+        return 'array';
+    } else if (typeof collection === 'object'){
+        return 'object';
+    }
 }
 
 //////////////////////////////////////////////////////////////////////
